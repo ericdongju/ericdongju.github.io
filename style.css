@@ -7,9 +7,23 @@
      margin: 0;
      font-family: serif;
      overflow: auto;
-    background: #383539;
     font-family: Georgia, serif;
     font-size: 18px;
+    font-weight: lighter;
+    background: #383539;
+     background-image: url('back/sky.jpg');
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: 100%;
+     background-attachment: fixed;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
  }
 
  /*FONT STYLES */
@@ -71,18 +85,20 @@
     position: fixed;
     float: right;
     width: 100%;
-    height: 40px;
-    background-color: #222222;
+    height: 50px;
     z-index: 25;
-    visibility: hidden;
 }
-#logo {
-    width: 150px;
-    height: 100%;
-    border-right: 1px solid gray;
-    border-left: 1px solid gray;
+#icon {
+    width: 35px;
+    height: 35px;
     float: left;
-    margin-left: 10px;
+    margin-left: 30px;
+    margin-top: 30px;
+    background-image: url(img/icon.png);
+
+}
+#icon:hover{
+    background-image: url(img/iconh.png);
 }
 
 /* CLASSES */
@@ -98,34 +114,57 @@
     color:white;
 }
 
- /* SPLASH PAGE */
+.rotate, .Srotate {
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
 
+}
+
+.rotate{
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    }
+
+.rotate:hover
+{
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+    -o-transform:rotate(360deg);
+}
+
+.Srotate{
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    }
+
+.Srotate:hover
+{
+    -webkit-transform:rotate(-25deg);
+    -moz-transform:rotate(-25deg);
+    -o-transform:rotate(-25deg);
+}
+
+ /* SPLASH PAGE */
+#background {
+    width: 100%;
+    height:100%;
+    background-color: #383539;
+    opacity: .7;
+    z-index:-10;
+    position: fixed;
+}
 
  #splash {
      height:100%;
      position: relative;
  }
- #background {
-     background-color: black;
-     width: 100%;
-     height: 100%;
-     background-image: url('back/sky.jpg');
-     background-position: top;
-     background-repeat: no-repeat;
-     background-size: 100%;
-     background-attachment: fixed;
-     -webkit-background-size: cover;
-     -moz-background-size: cover;
-     -o-background-size: cover;
-     background-size: cover;
-     opacity: 0.35;
-     top: 0;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     position: fixed;
-     z-index: -1;
- }
+
  #header {
      position:absolute;
      top: 50%;
@@ -136,7 +175,7 @@
      left: 50%;
      width:480px;
      height:128px;
-     border: 1px solid white;
+     border: 1px solid #b5b6b7;
      border-radius: 5px;
  }
  #s_head {
@@ -156,7 +195,10 @@
  }
  #s_scroll:hover {
      background-image: url(img/hscroll.png);
+    transform: rotate(360deg);
  }
+
+
 
 
  /*   END OF SPLASH PAGE   */
