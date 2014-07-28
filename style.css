@@ -1,0 +1,222 @@
+
+ html, body {
+     width: 100%;
+     height:100%;
+ }
+ body {
+     margin: 0;
+     font-family: serif;
+     overflow: auto;
+    background: #383539;
+    font-family: Georgia, serif;
+    font-size: 18px;
+ }
+
+ /*FONT STYLES */
+@font-face {
+    font-family: 'sinkin_sans600_semibold';
+    src: url('fonts/SinkinSans-600SemiBold-webfont.eot');
+    src: url('fonts/SinkinSans-600SemiBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/SinkinSans-600SemiBold-webfont.woff') format('woff'),
+         url('fonts/SinkinSans-600SemiBold-webfont.ttf') format('truetype'),
+         url('fonts/SinkinSans-600SemiBold-webfont.svg#sinkin_sans600_semibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+ h1,h3 {
+    font-size: 65px;
+    letter-spacing: 12px;
+    font-family: 'sinkin_sans600_semibold';
+    padding: 0px;
+    margin-bottom: -5px;
+ }
+ h2 {
+    font-size: 20px;
+    font-family: 'sinkin_sans600_semibold';
+ }
+ h1 {
+    color: #222222;
+ }
+ h3 {
+    color:white;
+ }
+
+ .accent {
+     color: #9ecfdf;
+ }
+ .accentwhite {
+     color: #5e9eb3;
+ }
+ a:link, a:visited, a:active {
+     color: white;
+     text-decoration: none;
+ }
+ a:hover {
+     color:#9ecfdf;
+     text-decoration: none;
+ }
+ a.black:link, a.black:visited, a.black:active {
+     color: black;
+     text-decoration: none;
+ }
+ a.black:hover {
+     color: #5e9eb3;
+     text-decoration: none;
+ }
+
+/* MENU */
+
+#menu {
+    position: fixed;
+    float: right;
+    width: 100%;
+    height: 40px;
+    background-color: #222222;
+    z-index: 25;
+}
+#logo {
+    width: 150px;
+    height: 100%;
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    float: left;
+    margin-left: 10px;
+}
+
+/* CLASSES */
+
+ .left {
+    text-align: left;
+ }
+ .right{
+    text-align: right;
+ }
+
+
+ /* SPLASH PAGE */
+
+
+ #splash {
+     height:100%;
+     position: relative;
+ }
+ #background {
+     background-color: black;
+     width: 100%;
+     height: 100%;
+     background-image: url('back/sky.jpg');
+     background-position: top;
+     background-repeat: no-repeat;
+     background-size: 100%;
+     background-attachment: fixed;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+     opacity: 0.95;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     position: fixed;
+     z-index: -1;
+ }
+ #header {
+     position:absolute;
+     top: 50%;
+     margin-top: -64px;
+     /*set to a negative number 1/2 of your height*/
+     margin-left: -240px;
+     /*set to a negative number 1/2 of your width*/
+     left: 50%;
+     width:480px;
+     height:128px;
+     border: 1px solid white;
+     border-radius: 5px;
+ }
+ #s_head {
+     background: rgba(0, 0, 0, 0.15);
+     height: 100px;
+     padding-top: 25px;
+ }
+ #s_scroll {
+     position: absolute;
+     bottom: 10%;
+     width: 30px;
+     height: 30px;
+     /*horizontal centering: */
+     margin: 0px 0 0 -16px;
+     left: 50%;
+     background-image: url(img/scroll.png);
+ }
+ #s_scroll:hover {
+     background-image: url(img/hscroll.png);
+ }
+
+
+ /*   END OF SPLASH PAGE   */
+
+
+ #wrapper {
+     height: 100%;
+     width: 100%;
+
+ }
+
+ /* ABOUT */
+ #About {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position:relative;
+    background-color:  white;
+
+ }
+ #A_content {
+    position:absolute;
+     width:100%;
+     height:900px;
+ }
+
+
+ /*  END OF ABOUT */
+
+ #Projects{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position:relative;
+    background-image: url('back/colorsky.jpg');
+     background-position: top;
+     background-repeat: no-repeat;
+     background-size: 100%;
+     background-attachment: fixed;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     right: 0;
+     opacity: 0.8;
+
+}
+#P_Content {
+
+}
+
+#Findme {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position:relative;
+    background-color: white;
+
+}
+ #footer {
+     width: 100%;
+     height: 400px;
+     background: rgba(225, 225, 225, 0.7)
+ }

@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Portfolio | Eric DongJu Lee</title>
+        <link rel="stylesheet" href="style.css">
+        <script type='text/javascript' src='http://code.jquery.com/jquery-1.8.3.js'></script>
+        <link href='http://fonts.googleapis.com/css?family=Andada' rel='stylesheet' type='text/css'>
+        <script type='text/javascript' src='script1.js'></script>
+    </head>
+
+    <body>
+        <div id="background"></div>
+        <div id="menu">
+            <div id="logo"><img draggable="no" src=""></div>
+        </div>
+
+<!--splash -->
+        <section id="splash">
+            <div id="header">
+                    <div id="s_head">
+                        <img src="img/ericdongjulee.png">
+                        <img draggable="false" src="img/subtext.png">
+                    </div>
+            </div>
+                <a href="#PA" id="anchor" class="anchorLink">
+                    <div id="s_scroll">
+                    </div>
+                </a>
+        </section>
+<!-- /splash -->
+
+        <div id="wrapper">
+
+            <section id="About">
+                <a name="AA" id="AA" ></a>
+                <div id="A_content">
+                    <h1>WHO AM I?</h1>
+                    <div id="des">
+                        <p>I'm an aspiring developer based in Vancouver, Canada.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="Projects">
+                <div id="P_content">
+                    <a name="PA" id="PA"></a>
+                    <h3>SELECTED WORK</h3>
+                <div id="github">GITHUB</div>
+                </div>
+            </section>
+
+            <section id="Findme">
+                <div id="F_content">
+                <a name="FA" id="FA"></a>
+                <h1>FIND ME</h1>
+                </div>
+            </section>
+        </div>
+
+
+        <script>
+            $('a').click(function() {
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top
+                }, 800);
+                return false;
+            });
+        </script>
+    </body>
+
+</html>
