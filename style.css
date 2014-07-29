@@ -11,8 +11,8 @@
     font-size: 18px;
     font-weight: lighter;
     background: #383539;
-     background-image: url('back/sky.jpg');
-     background-position: center;
+     background-image: url('back/17.jpg');
+     background-position: top;
      background-repeat: no-repeat;
      background-size: 100%;
      background-attachment: fixed;
@@ -95,8 +95,8 @@
     z-index: 25;
 }
 #icon {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     float: left;
     margin-left: 30px;
     margin-top: 30px;
@@ -182,18 +182,18 @@
 
 
  /* SPLASH PAGE */
-}
+
 #background {
-    width: 100%;
+    width: 105%;
     height:100%;
-    background-color: #383539;
-    opacity: .7;
-    z-index:-10;
+    background-color: black;
+    opacity: 0.8;
+
     position: fixed;
 }
 
  #splash {
-     height:100%;
+     height:105%;
      position: relative;
  }
 
