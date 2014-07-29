@@ -6,7 +6,8 @@ function preloader() {
 
         img1.src = "img/scroll.png";
         img2.src = "img/hscroll.png";
-        img3.src = "img/menuh.png";
+        img3.src= "img/xh.png";
+        img4.src= "back/background.jpg";
     }
 }
 function addLoadEvent(func) {
