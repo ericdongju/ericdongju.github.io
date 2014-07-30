@@ -17,8 +17,9 @@
     font-family: 'Lora', serif;
     font-size: 18px;
     font-weight: lighter;
+    -webkit-font-smoothing: antialiased;
     background: #383539;
-     background-image: url('back/background.jpg');
+     background-image: url('back/2.jpg');
      background-position: center;
      background-repeat: no-repeat;
      background-size: 100%;
@@ -34,37 +35,29 @@
  }
 
  /*FONT STYLES */
-@font-face {
-    font-family: 'sinkin_sans600_semibold';
-    src: url('fonts/SinkinSans.eot');
-    src: url('fonts/SinkinSans.eot?#iefix') format('embedded-opentype'),
-         url('fonts/SinkinSans.woff') format('woff'),
-         url('fonts/SinkinSans.ttf') format('truetype'),
-         url('fonts/SinkinSans.svg#sinkin_sans600_semibold') format('svg');
-    font-weight: normal;
-    font-style: normal;
 
-}
- h1,h3 {
-    font-size: 65px;
-    letter-spacing: 12px;
-    font-family: 'sinkin_sans600_semibold';
-    padding: 0px;
-    margin-bottom: -5px;
+ h1 {
+    font-size: 100px;
+    letter-spacing: 25px;
+    font-weight: normal;
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+
  }
  h2 {
     font-size: 20px;
-    font-family: 'sinkin_sans600_semibold';
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: normal;
+    margin: 0;
  }
- h3 {
-    color: #222222;
- }
+
+
 
  .accent {
      color: #9ecfdf;
  }
  .accent2 {
-     color: #7c777d;
+     color: #798091;
     font-family: 'Lora', serif;
     font-style: italic;
      font-size: 13px;
@@ -109,9 +102,12 @@
     float: left;
     margin-left: 30px;
     margin-top: 30px;
-    background-image: url(img/icon.png);
+    background-image: url(img/iconh.png);
     z-index: 100;
 
+}
+#icon:hover{
+        background-image: url(img/icon.png);
 }
 
 
@@ -119,7 +115,7 @@
     width: 225px;
     height: 100%;
     float: left;
-    background-color: #222222;
+    background-color: #3a404e;
     position: fixed;
     display:none;
     z-index: 100;
@@ -171,10 +167,19 @@ footer {
 }
 #footercontent {
     position: absolute;
-    bottom: 25px;
-    margin-left: 35px;
+    bottom: 30px;
+    margin-left: 20px;
 }
 /* CLASSES */
+.page {
+    padding-top: 40px;
+}
+
+.center {
+      display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
  .left {
     text-align: left;
@@ -231,9 +236,9 @@ footer {
 
 #background {
     width: 100%;
-    height:100%;
-    background-color: black;
-    opacity: 0.60;
+    height:105%;
+    background-color: #090d0e;
+    opacity: 0.70;
     position: fixed;
 }
 
@@ -252,11 +257,10 @@ footer {
      left: 50%;
      width:480px;
      height:128px;
-     border: 1px solid #b5b6b7;
-     border-radius: 5px;
+
  }
  #s_head {
-     background: rgba(0, 0, 0, 0.35);
+
      height: 100px;
      padding-top: 25px;
  }
@@ -281,60 +285,100 @@ footer {
  /*   END OF SPLASH PAGE   */
 
 
- #wrapper {
-     height: 100%;
-     width: 100%;
 
- }
 
  /* ABOUT */
+
+#about h2{
+    color: #add2de;
+
+}
  #About {
     width: 100%;
-    height: 105%;
+    min-height: 105%;
+    min-width: 750px;
+    height: auto;
     text-align: center;
     position:relative;
-    background-color:  white;
+    background: rgba(129, 109, 98, .30);
+    color: white;
 
  }
+
+
  #A_content {
-    position:absolute;
-     width:100%;
-     height:900px;
+    margin-top: 5%;
+
+     height:auto;
  }
+
+#A_wrap {
+    width: 75%;
+    margin-top: 10%;
+    height: auto;
+    position: relative;
+    font-size: 17px;
+    line-height: 24px;
+    padding-bottom: 20%;
+}
+#left, #center, #right {
+    width:30%;
+    text-align: left;
+}
+#left {
+    float: left;
+
+}
+#center {
+display: inline-block;
+
+}
+#right {
+    float: right;
+
+}
+
 
 
  /*  END OF ABOUT */
 
  #Projects{
     width: 100%;
-    height: 105%;
+    min-height: 105%;
+    height: auto;
     text-align: center;
     position: relative;
-
+    background: rgba(102, 90, 85, 0.45 );
 
 }
 
 #P_content{
-    position: absolute;
-    background-color: black;
     width: 100%;
-    height: 100%;
+    height: auto;
+    color: white;
 }
 #github {
     bottom: 25px;
     position: absolute;
 }
 
+
+
 #Findme {
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    min-width: 750px;
+    height: auto;
     text-align: center;
     position:relative;
-    background-color: white;
+    background: rgba(71, 78, 93, 0.3);
+    color: white;
 
 }
 #F_content{
-    position: absolute;
-    width: 100%;
+    position: relative;
+    width: 590px;
     height: 100%;
+    margin-top: 5%;
+     height:auto;
 }
