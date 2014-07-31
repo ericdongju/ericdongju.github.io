@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 
     <head>
-        <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=2.0" />
         <title>Portfolio | Eric DongJu Lee</title>
         <link rel="stylesheet" href="style.css">
        <link href='http://fonts.googleapis.com/css?family=Fira+Sans:500|Lora:400,400italic' rel='stylesheet' type='text/css'>
@@ -13,14 +13,18 @@
     </head>
 
     <body>
-        <div id="background"></div>
+        <div id="filter"></div>
+        <div id="blurred-image-container">
+    <div class="img-src" id="background"></div>
+    <div class="img-src blurred-img" id="blurredbackground"></div>
+</div>
         <div id="menu">
             <div id="icon" class="Srotate"></div>
         </div>
         <div id="sidebar" >
             <div id="SBwrapper">
                 <div id='slide' class="rotate"></div>
-                <nav>
+                <nav class="Lora">
                     <span class="accent2">Explore:</span>
                     <ul>
                         <li><a href="#AA">Who Am I?</a></li>
@@ -67,42 +71,50 @@
                 <h1>WHO AM I?</h1>
                 <br>
             </div>
-            <div id="A_wrap" class ="center">
+            <div id="A_wrap" class ="center Lora">
                 <div id="left">
                 <h2>DESIGNER</h2>
-                <p>remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>I enjoy simple and ergonomic designs. It doesn't matter how technically impressive the UI may be, if it doesn't resonate with the users in a personal and comfortable level, the design is flawed. Instead, I strive for an unique balance between technicality and usability.</p>
                 </div>
                 <div id="center">
-                <h2>DEVELOPER</h2>
-                <p>Lonknownalley of tyled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesning essentially unchanged. It  Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <h2>CREATOR</h2>
+                <p>I started writing stories when I was five. I began coding when I thirteen. Creation is something I've been always been passionate about. I don't think having an arsenol of coding languages makes you a great programmer. I believe it's the willingness to create and inspire others that makes you great. </p>
+
                 </div>
                 <div id="right">
-                <h2>CREATOR</h2>
-                <p>I started writing stories when I was five. I began coding when I thirteen. Creation is something I've been always been passionate in. I don't think having an arsenol of coding languages makes you a great programmer. I believe it's the willingness to create and inspire change that makes you great programmer. </p>
+                <h2>DEVELOPER</h2>
+                <p>I specialize in back-end and front-end development, along with programming languages such as Python and Racket. When it comes to development, nothings more important than a blueprint-- by setting a clear goal, it will save projects valuable time and money. </p>
                 </div>
+                <a href="resume.html"><div class="center singlelink"> VIEW RESUME</div></a>
                 </div>
-
             </div>
+
         </section>
         <section id="Projects" class="page">
         <a name="PA" id="PA"></a>
 
             <div class="wrapper">
-                <div id="P_content">
+                <div id="P_content" class="Lora">
                      <h1>PORTFOLIO</h1>
 
-                    <div class="des">
-                        <p>The following are a selected few.</p>
-                    </div>
+                </div>
+                <a target="_blank" href="http://github.com/ericdongju"><div class="center singlelink"> VIEW GITHUB</div></a>
                 </div>
             </div>
         </section>
         <section id="Findme" class="page center">
             <div class="wrapper center">
                 <div id="F_content" class="center"> <a name="FA" id="FA"></a>
-
                      <h1>FIND ME</h1>
-                    There's bits and pieces of me scattered all throughout the internet. But the following are the ones I check and update daily.
+                </div>
+                <div id="des" class="Lora">
+                    There's bits and pieces of me scattered all throughout the internet. <br>But here are the ones I check and update daily.
+                    </div>
+                <div id="F_linkwrap">
+                    <a href="mailto:ericdongju@outlook.com"><div class="f_link">EMAIL</div></a>
+                    <a target="_blank"  href="http://github.com/ericdongju"> <div class="f_link">GITHUB</div></a>
+                    <a target="_blank"  href="http://twitter.com/ericdongju"><div class="f_link">TWITTER</div></a>
+                    <a target="_blank"  href="http://medium.com/@ericdongju"><div class="f_link">BLOG</div></a>
                 </div>
             </div>
         </section>
@@ -155,6 +167,15 @@
                 $('#sidebar').toggle(effect, options, duration);
             });
         </script>
+        <script>
+        $(window).scroll(function() {
+    // Get scroll position
+    var s = $(window).scrollTop(),
+    // scroll value and opacity
+    opacityVal = (s / 2900.0);
+    // opacity value 0% to 100%
+    $('.blurred-img').css('opacity', opacityVal);
+});</script>
     </body>
 
 </html>
