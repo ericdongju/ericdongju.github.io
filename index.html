@@ -8,6 +8,8 @@
         <link href='http://fonts.googleapis.com/css?family=Oswald:300|Fira+Sans:500|Lora:400,400italic' rel='stylesheet' type='text/css'>
         <script src="external/jquery/jquery.js"></script>
         <script src="jquery-ui.min.js"></script>
+
+
     </head>
 
     <body>
@@ -27,7 +29,6 @@
             <div id="SBwrapper">
                 <div id='slide' class="rotate"></div>
                 <nav class="Lora"> <span class="accent">Explore:</span>
-
                     <ul>
                         <li><a href="#AA">Who Am I?</a>
                         </li>
@@ -35,15 +36,13 @@
                         </li>
                         <li><a href="#FA">Find Me</a>
                         </li>
-                    </ul> <span class="accent">For the curious:</span>
- <span id="extralinks">
-                     <ul>
+                      </ul>
+                    <span class="accent">For the curious:</span>
+                     <ul id="extralinks">
                         <li><a target="_blank" href="http://medium.com/@ericdongju">Blog</a></li>
                         <li><a href="#AA">Résumé</a></li>
                         <li><a href="#FA">About this site</a></li>
                     </ul>
-                    </span>
-
                 </nav>
                 <footer>
                     <div id="footercontent" class="serif">Hand-coded from scratch.
@@ -57,7 +56,7 @@
                 <div id="s_head">
 <span class="center" id="DongJuLee">
 ERIC <span class="accent">DONGJU</span> LEE</span>
-                    <img draggable="false" class="center" src="img/subtext.png">
+                    <img draggable="false" class="center" src="img/subtext.png" alt="Software/Web Developer">
                 </div>
             </div> <a href="#AA" id="anchor" class="anchorLink">
                   <div id="s_scroll" class="rotate" ></div>
@@ -65,7 +64,7 @@ ERIC <span class="accent">DONGJU</span> LEE</span>
 
         </section>
         <!-- /splash -->
-        <a name="AA" id="AA"></a>
+        <a  id="AA"></a>
         <section id="About" class="page">
             <div id="A_content" class="center">
                  <h1>WHO AM I?</h1>
@@ -90,9 +89,8 @@ ERIC <span class="accent">DONGJU</span> LEE</span>
                 </div> <a href="resume.html"><div class="center singlelink"> VIEW RESUME</div></a>
 
             </div>
-            </div>
         </section>
-        <section id="Projects" class="page"> <a name="PA" id="PA"></a>
+        <section id="Projects" class="page"> <a id="PA"></a>
 
             <div class="wrapper">
                 <div id="P_content" class="Lora">
@@ -101,11 +99,10 @@ ERIC <span class="accent">DONGJU</span> LEE</span>
                 </div> <a target="_blank" href="http://github.com/ericdongju"><div class="center singlelink"> VIEW GITHUB</div></a>
 
             </div>
-            </div>
         </section>
         <section id="Findme" class="page center">
             <div class="wrapper center">
-                <div id="F_content" class="center"> <a name="FA" id="FA"></a>
+                <div id="F_content" class="center"> <a id="FA"></a>
 
                      <h1>FIND ME</h1>
 
@@ -121,7 +118,7 @@ ERIC <span class="accent">DONGJU</span> LEE</span>
         </section>
         <script>
             $(function() {
-                $("#header, #filter,#s_scroll, #menu").hide();
+                $("#header, #filter,#s_scroll, #menu,#left,  #right, #center").hide();
                 $("#header,#filter").delay(500).fadeIn(1500);
                 $("#s_scroll, #menu").delay(1400).fadeIn(3500);
             });
@@ -144,6 +141,15 @@ ERIC <span class="accent">DONGJU</span> LEE</span>
                     opacityVal = (s / 1900.0);
                 $('.blurred-img').css('opacity', opacityVal);
             });
+        </script>
+        <script>
+         $(window).bind("scroll", function() {
+    if ($(this).scrollTop() > 710) {
+        $("#left,  #right, #center").delay(500).fadeIn(700);
+    } else {
+        $("#left,  #right, #center").stop().fadeOut();
+    }
+});
         </script>
     </body>
 
