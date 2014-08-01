@@ -429,11 +429,12 @@ footer {
      top: 50%;
      margin-top: -20px;
     /*set to a negative number 1/2 of your height*/
-    margin-left: -295px;
+    margin-left: -270px;
      /*set to a negative number 1/2 of your width*/
      left: 50%;
     width: 540px;
     height:40px;
+    font-size: 15px;
 
 
 }
@@ -455,8 +456,10 @@ footer {
     line-height: 20px;
      background: rgba(129, 109, 98, .10);
     margin:20px;
-    font-family: 'Oswald';
-    letter-spacing: 1px;
+    font-family: 'Fira Sans';
+    font-weight: thin;
+    font-size: 14px;
+    letter-spacing: 3px;
     color: white;
 
 }
