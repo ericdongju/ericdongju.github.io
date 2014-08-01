@@ -71,7 +71,14 @@
     color: #c7afa2;
  }
 
-
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size:75px;
+    color: white;
+    letter-spacing: 15px;
+    font-weight: normal;
+    margin: 0;
+}
 
  .accent {
      color: #9C9F84;
@@ -318,12 +325,6 @@ footer {
 
  }
 
-#DongJuLee {
-    font-family: 'Oswald', sans-serif;
-    font-size:75px;
-    color: white;
-    letter-spacing: 15px;
-}
 
 
  /*   END OF SPLASH PAGE   */

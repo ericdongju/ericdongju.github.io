@@ -54,8 +54,8 @@
         <section id="splash">
             <div id="header">
                 <div id="s_head">
-<span class="center" id="DongJuLee">
-ERIC <span class="accent">DONGJU</span> LEE</span>
+<h3  >
+ERIC <span class="accent">DONGJU</span> LEE</h3>
                     <img draggable="false" class="center" src="img/subtext.png" alt="Software/Web Developer">
                 </div>
             </div> <a href="#AA" id="anchor" class="anchorLink">
@@ -118,7 +118,7 @@ ERIC <span class="accent">DONGJU</span> LEE</span>
         </section>
         <script>
             $(function() {
-                $("#header, #filter,#s_scroll, #menu,#left,  #right, #center").hide();
+                $("#header, #filter,#s_scroll, #menu").hide();
                 $("#header,#filter").delay(500).fadeIn(1500);
                 $("#s_scroll, #menu").delay(1400).fadeIn(3500);
             });
@@ -142,15 +142,7 @@ ERIC <span class="accent">DONGJU</span> LEE</span>
                 $('.blurred-img').css('opacity', opacityVal);
             });
         </script>
-        <script>
-         $(window).bind("scroll", function() {
-    if ($(this).scrollTop() > 710) {
-        $("#left,  #right, #center").delay(500).fadeIn(700);
-    } else {
-        $("#left,  #right, #center").stop().fadeOut();
-    }
-});
-        </script>
+
     </body>
 
 </html>
