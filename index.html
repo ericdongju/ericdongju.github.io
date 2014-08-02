@@ -2,87 +2,73 @@
 <html class="no-js" lang="en">
 
     <head>
-        <meta charset="utf-8" name="viewport" content="width=750,initial-scale=1.0" />
+        <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0" />
         <title>Portfolio | Eric DongJu Lee</title>
         <link rel="stylesheet" href="style.css">
-        <link href='http://fonts.googleapis.com/css?family=Oswald:300|Fira+Sans:500|Lora:400,400italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Oswald:300|Lora:400,400italic' rel='stylesheet' type='text/css'>
         <script src="external/jquery/jquery.js"></script>
         <script src="jquery-ui.min.js"></script>
-
-
     </head>
 
     <body>
 
-<!-- Background Effects -->
+        <!-- Background Effects -->
         <div id="filter"></div>
         <div id="blurred-image-container">
             <div class="img-src" id="background"></div>
             <div class="img-src blurred-img" id="blurredbackground"></div>
         </div>
-   <!-- /Background Effects -->
+        <!-- /Background Effects -->
 
-        <div id="menu">
-            <div id="icon" class="Srotate"></div>
-        </div>
-        <div id="sidebar">
-            <div id="SBwrapper">
-                <div id='slide' class="rotate"></div>
-                <nav class="Lora"> <span class="accent">Explore:</span>
+        <!--Navigation -->
+        <nav>
+            <div id="N_wrap" class="center">
+                <div id="logo" class="accent">DONGJU</div>
+                <div id="links">
                     <ul>
-                        <li><a href="#AA">Who Am I?</a>
+                        <li><a href="#AA">WHO AM I</a>
                         </li>
-                        <li><a href="#PA">Portfolio</a>
+                        <li><a href="#PA">PROJECTS</a>
                         </li>
-                        <li><a href="#FA">Find Me</a>
+                        <li><a href="#FA">FIND ME</a>
                         </li>
-                      </ul>
-                    <span class="accent">For the curious:</span>
-                     <ul id="extralinks">
-                        <li><a target="_blank" href="http://medium.com/@ericdongju">Blog</a></li>
-                        <li><a href="#AA">Résumé</a></li>
-                        <li><a href="#FA">About this site</a></li>
                     </ul>
-                </nav>
-                <footer>
-                    <div id="footercontent" class="serif">Hand-coded from scratch.
-                        <br>Within the deep woods of Canada.</div>
-                </footer>
+                </div>
             </div>
-        </div>
-        <!--splash -->
+        </nav>
+        <!--/Navigation-->
+
+        <!--Splash -->
         <section id="splash">
             <div id="header">
                 <div id="s_head">
-<h3  >
-ERIC <span class="accent">DONGJU</span> LEE</h3>
+                     <h1>ERIC <span class="accent">DONGJU</span> LEE</h1>
+
                     <img draggable="false" class="center" src="img/subtext.png" alt="Software/Web Developer">
                 </div>
             </div> <a href="#AA" id="anchor" class="anchorLink">
-                  <div id="s_scroll" class="rotate" ></div>
+                  <div id="s_arrow" class="rotate" ></div>
               </a>
 
         </section>
-        <!-- /splash -->
-        <a  id="AA"></a>
-        <section id="About" class="page">
-            <div id="A_content" class="center">
-                 <h1>WHO AM I?</h1>
+        <!-- /Splash -->
+        <!--About-->
+        <section id="About" class="page"> <a id="AA"></a>
 
-                <br>
-            </div>
+             <h3>WHO AM I?</h3>
+
             <div id="A_wrap" class="center Lora">
-                <div id="left">
+                <div id="A1" class="leftdiv">
                      <h2>DESIGNER</h2>
 
                     <p>I enjoy simple and ergonomic designs. It doesn't matter how technically impressive the UI may be, if it doesn't resonate with the users in a personal and comfortable level, the design is flawed. Instead, I strive for an unique balance between technicality and usability.</p>
                 </div>
-                <div id="center">
+                <div id="A2" class="centerdiv">
                      <h2>CREATOR</h2>
 
                     <p>I started writing stories when I was five. I began coding when I thirteen. Creation is something I've always been passionate about. I don't think having an arsenol of coding languages makes you a great programmer. I believe it's the willingness to create and inspire others that makes you great.</p>
                 </div>
-                <div id="right">
+                <div id="A3" class="rightdiv">
                      <h2>DEVELOPER</h2>
 
                     <p>I specialize in back-end and front-end development, along with programming languages such as Python and Racket. When it comes to development, nothings more important than a blueprint-- by setting a clear goal, it will save projects valuable time and money.</p>
@@ -90,59 +76,63 @@ ERIC <span class="accent">DONGJU</span> LEE</h3>
 
             </div>
         </section>
-        <section id="Projects" class="page"> <a id="PA"></a>
+        <!-- /About -->
 
-            <div class="wrapper">
-                <div id="P_content" class="Lora">
-                     <h1>PORTFOLIO</h1>
+        <!-- Portfolio -->
+        <section id="Projects" class="page center"> <a id="PA"></a>
 
-                </div> <a target="_blank" href="http://github.com/ericdongju"><div class="center singlelink"> VIEW GITHUB</div></a>
+             <h3>PROJECTS</h3>
+
+            <div id="P_wrap" class="center Lora">
+                <div id="P1" class="leftdiv">DongJu Design</div>
+                <div id="P2" class="centerdiv">[Web App ]</div>
+                <div id="P3" class="rightdiv">One Script A Day</div>
+                <div id="bottom"></div> <a target="_blank" href="http://github.com/ericdongju"><div class="center singlelink"> VIEW GITHUB</div></a>
 
             </div>
         </section>
-        <section id="Findme" class="page center">
-            <div class="wrapper center">
-                <div id="F_content" class="center"> <a id="FA"></a>
+        <!-- /Portfoilio -->
 
-                     <h1>FIND ME</h1>
+        <!-- Find Me -->
+        <section id="Findme" class="page center"><a id="FA"></a>
 
-                </div>
-                <div id="des" class="Lora">There's bits and pieces of me scattered all throughout the internet. <br>But here are the ones I check and update daily.</div>
-                <div id="F_linkwrap"> <a href="mailto:ericdongju@outlook.com"><div class="f_link">EMAIL</div></a>
- <a target="_blank" href="http://github.com/ericdongju"> <div class="f_link">GITHUB</div></a>
- <a target="_blank" href="http://twitter.com/ericdongju"><div class="f_link">TWITTER</div></a>
+             <h3>FIND ME</h3>
 
-
-                </div>
+            <div id="des" class="center Lora">
+            <div id="profile" class="center"></div>
+            </div>
+            <div id="F_linkwrap">
+                <a target="_blank" href="http://github.com/ericdongju"> <div class="f_link">GITHUB</div></a>
+                <a href="mailto:ericdongju@outlook.com"><div class="f_link">EMAIL</div></a>
+                <a target="_blank" href="http://twitter.com/ericdongju"><div class="f_link">TWITTER</div></a>
+                <a target="_blank" href="http://twitter.com/ericdongju"><div class="f_link">MEDIUM</div></a>
             </div>
         </section>
+        <!-- /Find Me -->
+        <footer>
+        Handcrafted deep within the forests of Canada.
+        </footer>
         <script>
+            /* Initial fade-in: */
             $(function() {
                 $("#header, #filter,#s_scroll, #menu").hide();
                 $("#header,#filter").delay(500).fadeIn(1500);
-                $("#s_scroll, #menu").delay(1400).fadeIn(3500);
+                $("#s_scroll, #menu").delay(1400).fadeIn(1500);
             });
+            /*Smooth scroll between anchors: */
             $('a').click(function() {
                 $('html, body').animate({
                     scrollTop: $($(this).attr('href')).offset().top
                 }, 1000);
                 return false;
             });
-            $("#icon, #slide").click(function() {
-                var effect = 'slide';
-                var options = {
-                    direction: 'left'
-                };
-                var duration = 400;
-                $('#sidebar').toggle(effect, options, duration);
-            });
+            /* Background blur: */
             $(window).scroll(function() {
                 var s = $(window).scrollTop(),
-                    opacityVal = (s / 1900.0);
+                    opacityVal = (s / 2500.0);
                 $('.blurred-img').css('opacity', opacityVal);
             });
         </script>
-
     </body>
 
 </html>
