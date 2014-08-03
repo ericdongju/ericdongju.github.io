@@ -53,22 +53,6 @@ body {
     background: #383539;
 }
 /*FONT STYLES */
- h3 {
-    font-size: 100px;
-    letter-spacing: 25px;
-    font-weight: normal;
-    font-family:'Oswald', sans-serif;
-    padding: 0;
-    color: #9C9F84;
-    margin: 5% 0 0 0;
-}
-h2 {
-    font-size: 20px;
-    font-family:'Oswald', sans-serif;
-    font-weight: normal;
-    margin: 0;
-    color: #c7afa2;
-}
 h1 {
     font-family:'Oswald', sans-serif;
     font-size:75px;
@@ -77,6 +61,22 @@ h1 {
     font-weight: normal;
     margin: 0;
     text-align: center;
+}
+ h2 {
+    font-size: 100px;
+    letter-spacing: 25px;
+    font-weight: normal;
+    font-family:'Oswald', sans-serif;
+    padding: 0;
+    color: #9C9F84;
+    margin: 5% 0 0 0;
+}
+h3 {
+    font-size: 20px;
+    font-family:'Oswald', sans-serif;
+    font-weight: normal;
+    margin: 0;
+    color: #c7afa2;
 }
 .accent {
     color: #9C9F84;
@@ -99,26 +99,26 @@ a:hover {
     font-family: serif;
 }
 .singlelink {
-    max-width: 400px;
+    width: 400px;
     height: auto;
     padding: 2px;
-    border-radius: 13px;
     line-height: 52px;
-    font-family: sans-serif;
-    text-decoration: none;
+   font-family: sans-serif;
     font-weight: thin;
-    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: white;
     cursor: pointer;
     margin-top: 15%;
-    background: rgba(129, 109, 98, .40);
-    border: 1px solid #816d62;
-    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
     position: relative;
     transition: all 0.2s ease;
 }
 .singlelink:hover {
-    background: rgba(225, 225, 225, 0.1);
-    border: 1px solid white;
+    background: rgba(129, 109, 98, .05);
+    border: 1px solid #816d62;
     color: #efd7ca;
 }
 .page {
@@ -177,7 +177,7 @@ a:hover {
 }
 #logo {
     height: 50px;
-    width: 100px;
+    width: 110px;
     font-family:'Oswald', sans-serif;
     font-size:18px;
     letter-spacing: 5px;
@@ -209,6 +209,11 @@ a:hover {
 #links ul li a {
     text-decoration: none;
     font-family: sans-serif;
+    font-weight: thin;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: white;
     padding: 20px;
     transition: all 0.2s ease;
 }
@@ -240,8 +245,18 @@ a:hover {
     height:200px;
 }
 #s_head {
-    height: 100px;
+    position: relative;
     padding-top: 25px;
+    width: 100%;
+}
+#subtext {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-weight: thin;
+    font-size: 12px;
+    letter-spacing: 3px;
 }
 #s_arrow {
     position: absolute;
@@ -315,59 +330,46 @@ a:hover {
 /* FIND ME  */
  #Findme {
     width: 100%;
-    min-height: 100%;
+
     min-width: 750px;
-    height: auto;
+    height: 75%;
     text-align: center;
-    position:relative;
+    position: relative;
     background: rgba(102, 90, 85, 0.25);
     color: white;
 }
-#des {
-    margin-top: 5%;
-    width: 80%;
-    font-size: 15px;
-}
+
 #F_linkwrap {
-    margin-top: 5%;
-    width: 100%;
+    margin-top: 2%;
+    width: 500px;
+
 }
 .f_link {
     display: inline-block;
-    width: auto;
+    width: 90px;
     height: 20px;
-    border: 1px solid #44413f;
+    border: 1px solid #c7c9ba;
     border-radius: 10px;
     padding-bottom: 15px;
     padding-top: 15px;
     padding-left: 40px;
     padding-right: 40px;
-    line-height: 20px;
-    background: rgba(129, 109, 98, .10);
+    line-height: 25px;
     margin:20px;
     font-family: sans-serif;
-    text-decoration: thin;
+    font-weight: thin;
     -webkit-font-smoothing: antialiased;
     font-size: 14px;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     color: white;
 }
 .f_link:hover {
     background: rgba(225, 225, 225, 0.1);
     border: 1px solid white;
     color: #efd7ca;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
 }
-#profile {
-    background-image: url(img/profile.jpeg);
- width: 150px;
- height: 150px;
- background-size: cover;
- display: block;
- border-radius: 100px;
- -webkit-border-radius: 100px;
- -moz-border-radius: 100px;
-}
+
 
 
 footer {
