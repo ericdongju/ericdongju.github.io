@@ -342,7 +342,7 @@ a:hover {
 #F_linkwrap {
     margin-top: 2%;
     width: 500px;
-
+    line-height:30px;
 }
 .f_link {
     display: inline-block;
