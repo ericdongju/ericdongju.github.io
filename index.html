@@ -41,10 +41,10 @@
         <!--Splash -->
         <section id="splash">
             <div id="header" class="white Lora">
-                     <img class="center" draggable="false" src="img/logo.png" alt="Eric DongJu Lee" />
-                     <h1><span class="accent2">ERIC DONGJU LEE</h1><br>&#8212; Web and Software Developer &#8212;</span>
+                     <img id="h_logo" class="center animated bounceInDown" draggable="false" src="img/logo.png" alt="logo" />
+                     <h1 class="animated bounceInLeft">ERIC DONGJU LEE</h1><br><span class="animated bounceInUp">&#8212; Web and Software Developer &#8212;</span>
             </div>
-                  <div id="s_arrow"></div>
+                  <div id="s_arrow" class="animated bounceIn"></div>
         </section>
         <!-- /Splash -->
         <!--About-->
@@ -53,7 +53,7 @@
              <h2>WHO AM I?</h2>
 
             <div id="A_wrap" class="center Lora">
-                <div id="A1" class="leftdiv">
+                <div id="A1" class="animated fadeIn leftdiv">
                      <h3>DESIGNER</h3>
 
                     <p>I enjoy simple and ergonomic designs. It doesn't matter how technically impressive the UI may be, if it doesn't resonate with the users in a personal and comfortable level, the design is flawed. Instead, I strive for an unique balance between technicality and usability.</p>
@@ -110,7 +110,7 @@
             /* Initial fade-in: */
             $(function() {
                 $("#header, #filter, #s_arrow").hide();
-                $("#header,#filter").delay(500).fadeIn(1500);
+                $("#header,#filter").delay(500).fadeIn(1200);
                 $("#s_arrow").delay(2000).fadeIn(1500);
             });
             /*Smooth scroll between anchors: */
