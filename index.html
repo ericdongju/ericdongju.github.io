@@ -2,12 +2,11 @@
 <html class="no-js" lang="en">
 
     <head>
-        <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Portfolio | Eric DongJu Lee</title>
         <link rel="stylesheet" href="style.css">
-        <link href='http://fonts.googleapis.com/css?family=Oswald:300|Lora:400,400italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Dosis:300|Raleway:300|Lora:400,400italic' rel='stylesheet' type='text/css'>
         <script src="external/jquery/jquery.js"></script>
-        <script src="jquery-ui.min.js"></script>
     </head>
 
     <body>
@@ -22,15 +21,16 @@
 
         <!--Navigation -->
         <nav>
+            <div id="bar"></div>
             <div id="N_wrap" class="center">
-                <div id="logo" class="accent">DONGJU</div>
+                <div id="logo" class="accent1">DONGJU</div>
                 <div id="links">
                     <ul>
-                        <li><a href="#AA">WHO AM I?</a>
+                        <li><a href="#whoami">WHO AM I?</a>
                         </li>
-                        <li><a href="#PA">PROJECTS</a>
+                        <li><a href="#projects">PROJECTS</a>
                         </li>
-                        <li><a href="#FA">FIND ME</a>
+                        <li><a href="#findme">FIND ME</a>
                         </li>
                     </ul>
                 </div>
@@ -40,20 +40,20 @@
 
         <!--Splash -->
         <section id="splash">
-            <div id="header">
-                <div id="s_head">
-                     <h1>ERIC <span class="accent">DONGJU</span> LEE</h1>
-                     <br>
-                     <div id="subtext">SOFTWARE / WEB DEVELOPER</div>
-                </div>
-            </div> <a href="#AA" id="anchor" class="anchorLink">
-                  <div id="s_arrow" class="rotate" ></div>
-              </a>
+            <div id="header" class="white Lora">
+                     <img class="center" draggable="false" src="img/logo.png" alt="Eric DongJu Lee" />
+                     <h1><span class="accent2">ERIC DONGJU LEE</h1><br>&#8212; Web and Software Developer &#8212;</span>
+            </div>
+                  <div id="s_arrow"></div>
+            <div id="attribution" class="white"><a href="http://www.chasin-pigeons.com/">Photo by Fre Sonneveld</a> </div>
 
         </section>
         <!-- /Splash -->
+        <section id="Quote" class="page">
+
+        </section>
         <!--About-->
-        <section id="About" class="page"> <a id="AA"></a>
+        <section id="About" class="page"> <a id="whoami"></a>
 
              <h2>WHO AM I?</h2>
 
@@ -79,7 +79,7 @@
         <!-- /About -->
 
         <!-- Portfolio -->
-        <section id="Projects" class="page center"> <a id="PA"></a>
+        <section id="Projects" class="page center"> <a id="projects"></a>
 
              <h2>PROJECTS</h2>
 
@@ -94,7 +94,7 @@
         <!-- /Portfoilio -->
 
         <!-- Find Me -->
-        <section id="Findme" class="page center"><a id="FA"></a>
+        <section id="Findme" class="center"><a id="findme"></a>
 
              <h2>FIND ME</h2>
             <div id="profile" class="center"></div>
@@ -114,9 +114,9 @@
         <script>
             /* Initial fade-in: */
             $(function() {
-                $("#header, #filter,#s_scroll, #menu").hide();
+                $("#header, #filter, #s_arrow").hide();
                 $("#header,#filter").delay(500).fadeIn(1500);
-                $("#s_scroll, #menu").delay(1400).fadeIn(1500);
+                $("#s_arrow").delay(2000).fadeIn(1500);
             });
             /*Smooth scroll between anchors: */
             $('a').click(function() {
