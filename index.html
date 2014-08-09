@@ -100,12 +100,12 @@
              <h2>FIND ME</h2>
 
             <div id="profile" class="center"></div>
-            <div id="F_linkwrap" class=" hidden Lora center">Feel free to talk to me about your latest project or just follow me around the interwebs.
+            <div id="F_linkwrap" class="Lora center">Feel free to talk to me about your latest project or just follow me around the interwebs.
                 <br>
-                <br> <a href="mailto:ericdongju@outlook.com"><div id="email" class="hidden f_link">EMAIL</div></a>
- <a target="_blank" href="http://twitter.com/ericdongju"><div id="tweet" class="hidden f_link">TWITTER</div></a>
-                <br> <a target="_blank" href="http://medium.com/@ericdongju"><div id="blog" class="hidden f_link">MEDIUM</div></a>
- <a target="_blank" href="http://github.com/ericdongju"> <div id="git"class="hidden f_link">GITHUB</div></a>
+                <br> <a href="mailto:ericdongju@outlook.com"><div class="f_link">EMAIL</div></a>
+ <a target="_blank" href="http://twitter.com/ericdongju"><div class="f_link">TWITTER</div></a>
+                <br> <a target="_blank" href="http://medium.com/@ericdongju"><div class="f_link">MEDIUM</div></a>
+ <a target="_blank" href="http://github.com/ericdongju"> <div class="f_link">GITHUB</div></a>
                 <br>
             </div>
         </section>
@@ -143,15 +143,6 @@
                         $('#A3').removeClass('hidden').addClass('animated fadeInRight');
                         $('#resume').removeClass('hidden').addClass('animated fadeIn');
                         $('#resume').removeClass('hidden').addClass('animated fadeIn');
-                    }, 400);
-                }
-            });
-            $(window).scroll(function() {
-                var height = $(window).scrollTop();
-                var findMe = $(window).height() * 3;
-                if (height >= findMe) {
-                    setTimeout(function() {
-                        $('#F_linkwrap').removeClass('hidden').addClass('animated fadeIn');
                     }, 400);
                 }
             });
