@@ -71,6 +71,7 @@ body {
     margin-top: 20px;
     color: #d6bbac;
 }
+@media (min-width:630px){
 h2 {
     font-size: 4.5em;
     letter-spacing: 0.3em;
@@ -79,6 +80,18 @@ h2 {
     padding: 0;
     color: white;
     margin: 5% 0 0 0;
+}
+}
+@media (max-width:629px){
+h2 {
+    font-size: 3.5em;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    font-family:'Raleway', sans-serif;
+    padding: 0;
+    color: white;
+    margin: 5% 0 0 0;
+}
 }
 h3 {
     font-size: 1.4em;
@@ -107,6 +120,7 @@ a:hover {
 .serif {
     font-family: serif;
 }
+@media (min-width:630px){
 .singlelink {
     width: 28em;
     height: auto;
@@ -133,6 +147,36 @@ a:hover {
     background: rgba(129, 109, 98, .05);
     border: 0.1em solid #816d62;
     color: #efd7ca;
+}
+}
+@media (max-width:629px){
+.singlelink {
+    width: 90%;
+    height: 65px;
+    margin-top: 85%;
+    padding: 0.1em;
+    line-height: 65px;
+    font-family: sans-serif;
+    font-weight: thin;
+    -webkit-font-smoothing: antialiased;
+    font-size: 0.9em;
+    letter-spacing: 0.3em;
+    color: white;
+    cursor: pointer;
+    border: 0.1em solid white;
+    border-radius: 10px;
+    position: relative;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.singlelink:hover {
+    background: rgba(129, 109, 98, .05);
+    border: 0.1em solid #816d62;
+    color: #efd7ca;
+}
 }
 .page {
     padding-top: 5%;
@@ -270,6 +314,7 @@ nav:hover {
     background: rgba(129, 109, 98, .40);
 }
 /* ABOUT */
+@media (min-width:630px){
  #About {
     width: 100%;
     min-height: 105%;
@@ -321,7 +366,63 @@ nav:hover {
     -ms-animation-delay: 1s;
     -o-animation-delay: 1s;
 }
+}
+@media (max-width:629px){
+    #About {
+    width: 100%;
+    min-height: 105%;
+    height: auto;
+    text-align: center;
+    position:relative;
+    background: rgba(129, 109, 98, .20);
+    color: white;
+    padding-bottom: 15%;
+}
+#A_wrap {
+    width: 90%;
+    margin-top: 10%;
+    height: auto;
+    position: relative;
+    line-height: 24px;
+}
+#A1, #A3 {
+    margin-top: 10%;
+    width:100%;
+    text-align: left;
+    font-size: 14px;
+    line-height: 25px;
+    -webkit-animation-duration: 1.3s;
+    -moz-animation-duration: 1.3s;
+    -ms-animation-duration: 1.3s;
+    -o-animation-duration: 1.3s;
+    animation-duration: 1.3s;
+}
+#A2 {
+        margin-top: 10%;
+    width:100%;
+    text-align: left;
+    font-size: 14px;
+    line-height: 25px;
+    -webkit-animation-duration: 2.5s;
+    -moz-animation-duration: 2.5s;
+    -ms-animation-duration: 2.5s;
+    -o-animation-duration: 2.5s;
+    animation-duration: 2.5s;
+}
+#resume {
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    -ms-animation-duration: 2s;
+    -o-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+    -o-animation-delay: 1s;
+}
+}
 /*  END OF ABOUT */
+@media (min-width:630px){
  #Projects {
     width: 100%;
     min-height: 105%;
@@ -343,18 +444,28 @@ nav:hover {
     width: 30%;
     line-height: 450px;
 }
-#P1 {
-}
-#P2 {
-}
-#P3 {
-}
 #github {
     bottom: 0;
     position: absolute;
 }
+}
+@media (max-width:629px){
+#Projects {
+    display: none;
+}
+#P_wrap {
+        display: none;
+}
+#P1, #P2, #P3 {
+        display: none;
+}
+#github {
+        display: none;
+}
+}
 /* FIND ME  */
- #Findme {
+@media (min-width:630px){
+     #Findme {
     width: 100%;
     min-width: 750px;
     min-height: 85%;
@@ -370,15 +481,6 @@ nav:hover {
     width: 500px;
     line-height:30px;
     color: #c7afa2;
-    -webkit-animation-duration: 2.5s;
-    -moz-animation-duration: 2.5s;
-    -ms-animation-duration: 2.5s;
-    -o-animation-duration: 2.5s;
-    animation-duration: 2.5s;
-    -webkit-animation-delay: 0.15s;
-    -moz-animation-delay: 0.15s;
-    -ms-animation-delay: 0.15s;
-    -o-animation-delay: 0.15s;
 }
 .f_link {
     display: inline-block;
@@ -409,6 +511,55 @@ nav:hover {
     -o-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
+}
+@media (max-width:629px){
+     #Findme {
+    width: 100%;
+    min-height: 85%;
+    height:auto;
+    padding-top: 40px;
+    text-align: center;
+    position: relative;
+    background: rgba(129, 109, 98, .25);
+    color: white;
+}
+#F_linkwrap {
+    margin-top: 2%;
+    width: 90%;
+    line-height:30px;
+    color: #c7afa2;
+}
+.f_link {
+    display: inline-block;
+    width: 90px;
+    height: 20px;
+    border: 1px solid #c7c9ba;
+    border-radius: 10px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 25px;
+    margin:20px;
+    font-family: sans-serif;
+    font-weight: thin;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: white;
+}
+.f_link:hover {
+    background: rgba(225, 225, 225, 0.1);
+    border: 1px solid white;
+    color: #efd7ca;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+}
+@media (min-width:630px){
 footer {
     position: relative;
     width: 100%;
@@ -419,11 +570,35 @@ footer {
 }
 #footerwrap{
     position: absolute;
-    height:15px;
+    height:25px;
     top: 50%;
-    margin-top: -7.5px;
+    margin-top: -12.5px;
     width: 100%;
     font-size: 13px;
     font-family:"Lora";
+    line-height: 25px;
     -webkit-font-smoothing: antialiased;
+}
+}
+@media (max-width:629px){
+footer {
+    position: relative;
+    width: 100%;
+    min-height: 15%;
+    height: auto;
+    color: white;
+    background: rgba(129, 109, 98, .1);
+    padding-top: 10%;
+}
+#footerwrap{
+    position: absolute;
+    height:15px;
+    top: 50%;
+    margin-top: -7.5px;
+    width: 90%;
+    font-size: 13px;
+    font-family:"Lora";
+    line-height: 25px;
+    -webkit-font-smoothing: antialiased;
+}
 }
