@@ -31,14 +31,6 @@ Copyright (c) 2014 Daniel Eden*/
     bottom: 0;
     right: 0;
 }
-#background {
-    background-image: url('back/background.jpg');
-    z-index: -5;
-}
-#blurredbackground {
-    background-image: url('back/backgroundblur.jpg');
-    z-index: -5;
-}
 #filter {
     width: 100%;
     height:105%;
@@ -52,27 +44,24 @@ html, body {
     max-width: 100%;
     height:100%;
 }
-}
-@media (max-width:699px){
 #background {
-display: none;
+    background-image: url('back/background.jpg');
+    z-index: -5;
 }
 #blurredbackground {
-display: none;
+    background-image: url('back/backgroundblur.jpg');
+    z-index: -5;
+}
+}
+@media (max-width:699px){
+#background,#blurredbackground  {
+    background-image: url('back/backgroundblur.jpg');
+    z-index: -5;
 }
 html, body {
     max-width: 100%;
     height:100%;
-    overflow-x:hidden;
 }
-}
-body {
-    margin: 0;
-    font-family:'Lora', serif;
-    font-size: 100%;
-    font-size: 16px;
-    font-weight: lighter;
-    background-image: url('back/backgroundblur.jpg');
 }
 /*FONT STYLES */
  h1 {
@@ -241,12 +230,6 @@ a:hover {
      #mobilenav, #glasses {
     display: none;
 }
-#navdocked {
-    background: rgba(53, 53, 51, 0.8);
-    width: 100%;
-    height: 3.125em;
-    position: absolute;
-}
  nav {
     position: fixed;
     float: right;
@@ -315,7 +298,7 @@ nav:hover {
 }
 }
 @media (max-width:699px){
-    nav, #navdocked {
+    nav{
         display: none;
     }
      #mobilenav {
@@ -329,7 +312,7 @@ nav:hover {
     font-family:'Raleway', sans-serif;
     font-size: 0.8em;
     background: rgba(223, 167, 136, 0.4);
-    z-index: 200;
+    z-index: 20;
     opacity: 0.5;
     cursor: pointer;
         -webkit-animation-delay: 1s;
@@ -343,13 +326,14 @@ nav:hover {
 }
 }
 /* SPLASH PAGE */
- #splash {
+
+@media (min-width:480px){
+     #splash {
     width: 100%;
     min-height: 305px;
     height:105%;
     position: relative;
 }
-@media (min-width:480px){
 #header {
     position:absolute;
     top: 50%;
@@ -364,25 +348,6 @@ nav:hover {
     font-family:"Raleway";
     font-size: 17px;
 }
-}
-@media (max-width:479px){
-#header {
-    position:absolute;
-    top: 50%;
-    margin-top: -145px;
-    width:100%;
-    height:250px;
-    text-align: center;
-    padding: 5px;
-    color:;
-    font-family:"Raleway";
-    font-size: 0.9em;
-}
-#h_logo{
-    height:80px;
-    width:79px;
-}
-}
 #s_arrow {
     position: absolute;
     bottom: 10%;
@@ -394,6 +359,33 @@ nav:hover {
     background-image: url(img/hscroll.png);
     opacity: 0.6;
     display: none;
+    cursor: pointer;
+}
+}
+@media (max-width:479px){
+     #splash {
+    width: 100%;
+    min-height:300px;
+    height: auto;
+    position: relative;
+}
+#header {
+    position:absolute;
+    top: 50%;
+    margin-top: -100px;
+    width:100%;
+    height:200px;
+    text-align: center;
+    font-family:"Raleway";
+    font-size: 0.9em;
+}
+#h_logo{
+    height:80px;
+    width:79px;
+}
+#s_arrow {
+display: hidden;
+}
 }
 /*   END OF SPLASH PAGE   */
 /* ABOUT */
@@ -476,11 +468,11 @@ nav:hover {
     text-align: left;
     font-size: 0.9em;
     line-height: 1.7em;
-    -webkit-animation-duration: 1.3s;
-    -moz-animation-duration: 1.3s;
-    -ms-animation-duration: 1.3s;
-    -o-animation-duration: 1.3s;
-    animation-duration: 1.3s;
+    -webkit-animation-duration: 0s;
+    -moz-animation-duration: 0s;
+    -ms-animation-duration: 0s;
+    -o-animation-duration: 0s;
+    animation-duration: 0s;
 }
 #A2 {
     position: relative;
@@ -489,11 +481,11 @@ nav:hover {
     text-align: left;
     font-size: 0.9em;
     line-height: 1.7em;
-    -webkit-animation-duration: 2.5s;
-    -moz-animation-duration: 2.5s;
-    -ms-animation-duration: 2.5s;
-    -o-animation-duration: 2.5s;
-    animation-duration: 2.5s;
+    -webkit-animation-duration: 0s;
+    -moz-animation-duration: 0s;
+    -ms-animation-duration: 0s;
+    -o-animation-duration: 0s;
+    animation-duration: 0s;
 }
 #resume {
     display: none;
