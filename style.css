@@ -87,7 +87,7 @@ body {
 }
 @media (min-width:700px){
 h2 {
-    font-size: 4.3em;
+    font-size: 4.5em;
     letter-spacing: 0.3em;
     font-weight: normal;
     font-family:'Raleway', sans-serif;
@@ -98,7 +98,7 @@ h2 {
 }
 @media (max-width:699px){
 h2 {
-    font-size: 3.5em;
+    font-size: 3.2em;
     letter-spacing: 0.1em;
     font-weight: normal;
     font-family:'Raleway', sans-serif;
@@ -113,6 +113,15 @@ h3 {
     font-weight: normal;
     margin: 0 0 10px 0;
     color: #c7afa2;
+}
+h4 {
+        font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: normal;
+    font-family:'Raleway', sans-serif;
+    padding: 0;
+    color: white;
+    margin: 5% 0 0 0;
 }
 .accent1 {
     color: #9C9F84;
@@ -136,7 +145,6 @@ a:hover {
 }
 @media (min-width:700px){
 .singlelink {
-    position: relative;
     width: 28em;
     height: 4em;
     padding: 0.1em;
@@ -166,10 +174,28 @@ a:hover {
 }
 @media (max-width:699px){
 .singlelink {
-display: none;
+    position: relative;
+    width: 28em;
+    height: 4em;
+    padding: 0.1em;
+    line-height: 4em;
+    font-family: sans-serif;
+    font-weight: thin;
+    -webkit-font-smoothing: antialiased;
+    font-size: 0.9em;
+    letter-spacing: 0.3em;
+    color: white;
+    cursor: pointer;
+    margin-top: 10%;
+    border: 0.1em solid white;
+    border-radius: 10px;
+    position: relative;
+
 }
 .singlelink:hover {
-display: none;
+    background: rgba(129, 109, 98, .05);
+    border: 0.1em solid #816d62;
+    color: #efd7ca;
 }
 }
 @media (min-width:700px){
@@ -212,23 +238,32 @@ display: none;
 }
 /* NAVIGATION */
 @media (min-width:700px){
+     #mobilenav, #glasses {
+    display: none;
+}
+#navdocked {
+    background: rgba(53, 53, 51, 0.8);
+    width: 100%;
+    height: 3.125em;
+    position: absolute;
+}
  nav {
     position: fixed;
     float: right;
     width: 100%;
     height: 3.125em;
     z-index: 25;
-    background: rgba(53, 53, 51, .02);
+    background: rgba(53, 53, 51, .01);
     overflow: hidden;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    opacity: 0.8;
+    opacity: 0.5;
 }
 nav:hover {
-    background: rgba(53, 53, 51, .8);
+    background: rgba(53, 53, 51, .95);
     opacity: 1;
 }
 #logo {
@@ -237,12 +272,15 @@ nav:hover {
     font-family:'Dosis', sans-serif;
     -webkit-font-smoothing: antialiased;
     font-size:1.12em;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.15em;
     font-weight: normal;
     text-align: left;
     line-height:  3.125em;
     cursor: default;
     float: left;
+    background: rgba(223, 167, 136, 0.3);
+    text-align: center;
+    color: white;
 }
 #N_wrap {
     width: 80%;
@@ -277,13 +315,28 @@ nav:hover {
 }
 }
 @media (max-width:699px){
-    nav {
+    nav, #navdocked {
         display: none;
     }
+     #mobilenav {
+    margin-left: 10px;
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    color: white;
+    width:55px;
+    height: 50px;
+    font-family:'Raleway', sans-serif;
+    font-size: 0.8em;
+    background: rgba(223, 167, 136, 0.4);
+    z-index: 10;
+    opacity: 0.9;
+}
 }
 /* SPLASH PAGE */
  #splash {
     width: 100%;
+    min-height: 305px;
     height:105%;
     position: relative;
 }
@@ -302,9 +355,6 @@ nav:hover {
     font-family:"Raleway";
     font-size: 17px;
 }
-#logo {
-    animation: slideLeft 0.5s ease-in 0.6s backwards, fadeOut 1s linear 4s backwards;
-}
 }
 @media (max-width:479px){
 #header {
@@ -318,9 +368,6 @@ nav:hover {
     color:;
     font-family:"Raleway";
     font-size: 0.9em;
-}
-#logo {
-    animation: slideLeft 0.5s ease-in 0.6s backwards, fadeOut 1s linear 4s backwards;
 }
 #h_logo{
     height:80px;
@@ -340,12 +387,6 @@ nav:hover {
     display: none;
 }
 /*   END OF SPLASH PAGE   */
- #Quote {
-    width:100%;
-    min-height: 200px;
-    height: auto;
-    background: rgba(129, 109, 98, .40);
-}
 /* ABOUT */
 @media (min-width:700px){
  #About {
@@ -414,11 +455,13 @@ nav:hover {
 #A_wrap {
     width: 90%;
     margin-top: 10%;
+    min-height: 40em;
     height: auto;
     position: relative;
     line-height: 24px;
 }
 #A1, #A3 {
+    position: relative;
     margin-top: 10%;
     width:100%;
     text-align: left;
@@ -431,7 +474,8 @@ nav:hover {
     animation-duration: 1.3s;
 }
 #A2 {
-        margin-top: 10%;
+    position: relative;
+    margin-top: 10%;
     width:100%;
     text-align: left;
     font-size: 0.9em;
@@ -443,7 +487,7 @@ nav:hover {
     animation-duration: 2.5s;
 }
 #resume {
-display: none;
+    display: none;
 }
 }
 /*  END OF ABOUT */
@@ -493,7 +537,7 @@ display: none;
      #Findme {
     width: 100%;
     min-width: 700px;
-    min-height: 85%;
+    min-height: 80%;
     height:auto;
     padding-top: 40px;
     text-align: center;
@@ -540,7 +584,7 @@ display: none;
 @media (max-width:699px){
      #Findme {
     width: 100%;
-    min-height: 85%;
+    min-height: 100%;
     height:auto;
     padding-top: 40px;
     text-align: center;
@@ -549,7 +593,7 @@ display: none;
     color: white;
 }
 #F_linkwrap {
-    margin-top: 2%;
+    margin-top: 10%;
     width: 90%;
     line-height:30px;
     color: #c7afa2;
@@ -565,7 +609,7 @@ display: none;
     padding-left: 40px;
     padding-right: 40px;
     line-height: 25px;
-    margin:20px;
+    margin:10px;
     font-family: sans-serif;
     font-weight: thin;
     -webkit-font-smoothing: antialiased;
@@ -607,13 +651,7 @@ footer {
 }
 @media (max-width:699px){
 footer {
-    position: relative;
-    width: 100%;
-    min-height: 15%;
-    height: auto;
-    color: white;
-    background: rgba(129, 109, 98, .1);
-    padding-top: 10%;
+display: none;
 }
 #footerwrap{
     position: absolute;
