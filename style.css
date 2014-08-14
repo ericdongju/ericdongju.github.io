@@ -227,9 +227,6 @@ a:hover {
 }
 /* NAVIGATION */
 @media (min-width:700px){
-     #mobilenav, #glasses {
-    display: none;
-}
  nav {
     position: fixed;
     float: right;
@@ -301,29 +298,6 @@ nav:hover {
     nav{
         display: none;
     }
-     #mobilenav {
-    margin-left: 10px;
-    text-align: center;
-    line-height: 50px;
-    position: fixed;
-    color: white;
-    width:55px;
-    height: 50px;
-    font-family:'Raleway', sans-serif;
-    font-size: 0.8em;
-    background: rgba(223, 167, 136, 0.4);
-    z-index: 20;
-    opacity: 0.5;
-    cursor: pointer;
-        -webkit-animation-delay: 1s;
-    -moz-animation-delay: 1s;
-    -ms-animation-delay: 1s;
-    -o-animation-delay: 1s;
-}
-#mobilenav:hover {
- opacity: 1;
- background: rgba(223, 167, 136, 1);
-}
 }
 /* SPLASH PAGE */
 
@@ -365,7 +339,7 @@ nav:hover {
 @media (max-width:479px){
      #splash {
     width: 100%;
-    min-height:300px;
+    min-height:250px;
     height: auto;
     position: relative;
 }
@@ -535,7 +509,11 @@ display: hidden;
 }
 /* FIND ME  */
 @media (min-width:700px){
+    .f_call{
+display: none;
+    }
      #Findme {
+
     width: 100%;
     min-width: 700px;
     min-height: 80%;
@@ -600,18 +578,47 @@ display: hidden;
     line-height:30px;
     color: #c7afa2;
 }
-.f_link {
+
+    .f_call {
     display: inline-block;
     width: 90px;
     height: 20px;
-    border: 1px solid #c7c9ba;
+    border: 1px solid white;
     border-radius: 10px;
     padding-bottom: 15px;
     padding-top: 15px;
     padding-left: 40px;
     padding-right: 40px;
     line-height: 25px;
-    margin:10px;
+    margin:20px;
+    font-family: sans-serif;
+    font-weight: thin;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #efd7ca;
+        background: rgba(225, 225, 225, 0.1);
+}
+.f_call:hover {
+    background: rgba(225, 225, 225, 0.1);
+    border: 1px solid #c7c9ba;
+    color: white;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.f_link {
+    display: inline-block;
+    width: 90px;
+    height: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    line-height: 25px;
+    margin:5px;
     font-family: sans-serif;
     font-weight: thin;
     -webkit-font-smoothing: antialiased;
@@ -619,9 +626,8 @@ display: hidden;
     letter-spacing: 4px;
     color: white;
 }
-.f_link:hover {
+.f_link:hover{
     background: rgba(225, 225, 225, 0.1);
-    border: 1px solid white;
     color: #efd7ca;
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
