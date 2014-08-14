@@ -2,7 +2,7 @@
 <html class="no-js" lang="en">
 
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
         <title>Portfolio | Eric DongJu Lee</title>
         <link rel="stylesheet" href="style.css">
         <link href='http://fonts.googleapis.com/css?family=Dosis:300|Raleway:300|Lora:400,400italic' rel='stylesheet' type='text/css'>
@@ -25,10 +25,13 @@
                 <div id="links">
                     <ul>
                         <li><a href="#whoami">WHO AM I?</a>
+
                         </li>
                         <li><a href="#projects">PROJECTS</a>
+
                         </li>
                         <li><a href="#findme">FIND ME</a>
+
                         </li>
                     </ul>
                 </div>
@@ -40,14 +43,19 @@
             <div id="header" class="white Lora">
                 <img id="h_logo" class="center animated bounceInDown" draggable="false" src="img/logo.png" alt="logo" />
                  <h1 class="animated bounceInLeft">ERIC DONGJU LEE</h1>
+
                 <br><span class="animated bounceInUp">&#8212; Web and Software Developer &#8212;</span>
+
             </div>
             <div id="s_arrow" class="animated bounceIn"></div>
         </section>
         <!-- /Splash -->
         <!--About-->
-        <section id="About" class="page"> <a id="whoami"></a>
+        <a id="whoami"></a>
+        <section id="About" class="page">
+
              <h2>WHO AM I?</h2>
+
             <div id="A_wrap" class="center Lora">
                 <div id="A1" class="leftdiv hidden">
                      <h3>DESIGNER</h3>
@@ -68,24 +76,32 @@
         </section>
         <!-- /About -->
         <!-- Portfolio -->
-        <section id="Projects" class="page center"> <a id="projects"></a>
+         <a id="projects"></a>
+        <section id="Projects" class="page center">
+
              <h2>PROJECTS</h2>
+
             <div id="P_wrap" class="center Lora">
                 <div id="P1" class="leftdiv">
-                    <h3>DongJu Design</h3>
+                     <h3>DongJu Design</h3>
+
                 </div>
                 <div id="P2" class="centerdiv">
-                    <h3>[Web App ]</h3>
+                     <h3>[Web App ]</h3>
+
                 </div>
                 <div id="P3" class="rightdiv">
-                    <h3>One Script A Day</h3>
+                     <h3>One Script A Day</h3>
+
                 </div>
                 <div id="bottom"></div> <a target="_blank" href="http://github.com/ericdongju"><div class="center singlelink"> VIEW GITHUB</div></a>
+
             </div>
         </section>
         <!-- /Portfoilio -->
         <!-- Find Me -->
-        <section id="Findme" class="center"><a id="findme"></a>
+        <a id="findme"></a>
+        <section id="Findme" class="center">
 
              <h2>FIND ME</h2>
 
@@ -94,14 +110,18 @@
                 <br>
                 <br> <a href="mailto:ericdongju@outlook.com"><div class="f_link">EMAIL</div></a>
  <a target="_blank" href="http://twitter.com/ericdongju"><div class="f_link">TWITTER</div></a>
+
                 <br> <a target="_blank" href="http://medium.com/@ericdongju"><div class="f_link">MEDIUM</div></a>
  <a target="_blank" href="http://github.com/ericdongju"> <div class="f_link">GITHUB</div></a>
+
                 <br>
             </div>
         </section>
         <!-- /Find Me -->
         <footer>
-            <div id="footerwrap"><center>Handcrafted from scratch. <br>Deep within the Canadian forests of Canada.</center></div>
+            <div id="footerwrap">
+                <center>Handcrafted from scratch. Deep within the Canadian forests of Canada.</center>
+            </div>
         </footer>
         <script>
             /* Initial fade-in: */
@@ -123,26 +143,37 @@
                     opacityVal = (s / 2500.0);
                 $('.blurred-img').css('opacity', opacityVal);
             });
-            if (window.height > 800){
-$('#A1,#A2,#A3,#resume').removeClass('hidden');
-
-
-}else
-{
-//Now include js files
-  $(window).scroll(function() {
-                var height = $(window).scrollTop();
-                var ninetyPercent = $(window).height() * 0.75;
-                if (height >= ninetyPercent) {
+        </script>
+        <script>
+                $(window).scroll(function() {
+                    var height = $(window).scrollTop();
+                    var ninetyPercent = $(window).height() * 0.75;
+                    if (height >= ninetyPercent) {
                         $('#A1').removeClass('hidden').addClass('animated fadeInLeft');
                         $('#A2').removeClass('hidden').addClass('animated fadeIn');
                         $('#A3').removeClass('hidden').addClass('animated fadeInRight');
                         $('#resume').removeClass('hidden').addClass('animated fadeIn');
                         $('#resume').removeClass('hidden').addClass('animated fadeIn');
                     }
-            });
-}
+                });
+            </script>
+            <script>
+            (function($) {
+    var $window = $(window),
+        $html = $('#A1, #A2, #A3, #resume');
 
-        </script>
+    function resize() {
+        if ($window.width() < 800) {
+            return $html.removeClass('hidden');
+        }
+
+        $html.addClass('hidden');
+    }
+
+    $window
+        .resize(resize)
+        .trigger('resize');
+})(jQuery);</script>
     </body>
+
 </html>
