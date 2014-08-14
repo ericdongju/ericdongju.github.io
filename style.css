@@ -110,6 +110,19 @@ a:hover {
     position: fixed;
     z-index: -4;
 }
+    #s_arrow {
+        position: absolute;
+        bottom: 10%;
+        width: 25px;
+        height: 25px;
+        /*horizontal centering: */
+        margin: 0px 0 0 -16px;
+        left: 50%;
+        background-image: url(img/hscroll.png);
+        opacity: 0.6;
+        display: none;
+        cursor: pointer;
+    }
 @media (min-width:700px) {
     html, body {
         max-width: 100%;
@@ -567,8 +580,8 @@ a:hover {
  @media (min-width:480px) {
     #splash {
         width: 100%;
-        min-height: 305px;
-        height:105%;
+        min-height: 105%;
+        height:auto;
         position: relative;
     }
     #header {
@@ -584,27 +597,11 @@ a:hover {
         font-family:"Raleway";
         font-size: 17px;
     }
-    #s_arrow {
-        position: absolute;
-        bottom: 10%;
-        width: 25px;
-        height: 25px;
-        /*horizontal centering: */
-        margin: 0px 0 0 -16px;
-        left: 50%;
-        background-image: url(img/hscroll.png);
-        opacity: 0.6;
-        display: none;
-        cursor: pointer;
-    }
-    .s_call {
-        display: none;
-    }
 }
 @media (max-width:479px) {
     #splash {
         width: 100%;
-        min-height:370px;
+        min-height:100%;
         height: auto;
         position: relative;
     }
@@ -621,28 +618,5 @@ a:hover {
     #h_logo {
         height:80px;
         width:79px;
-    }
-    .s_call {
-        display: inline-block;
-        width: 70px;
-        height: 10px;
-        border: 1px solid #c7c9ba;
-        border-radius: 30px;
-        padding-bottom: 15px;
-        padding-top: 15px;
-        padding-left: 40px;
-        padding-right: 40px;
-        line-height: 10px;
-        margin:40px;
-        font-family: sans-serif;
-        font-weight: lighter;
-        -webkit-font-smoothing: antialiased;
-        font-size: 14px;
-        letter-spacing: 4px;
-        color: #efd7ca;
-        background: rgba(225, 225, 225, 0.05);
-    }
-    #s_arrow {
-        display: hidden;
     }
 }
