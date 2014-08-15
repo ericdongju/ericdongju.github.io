@@ -509,17 +509,17 @@ a:hover {
     }
     .f_call {
         display: inline-block;
-        width: 45px;
-        height: 5px;
+        width: auto;
+        height: auto;
         border: 1px solid #c7c9ba;
         border-radius: 30px;
-        padding: 15px 40px 15px 40px;
+        padding: 0.9em 1.875em 0.9em 1.875em;
         line-height: 5px;
-        margin-top:3.2em;
+        margin-top:2em;
         font-family: sans-serif;
         font-weight: lighter;
         -webkit-font-smoothing: antialiased;
-        font-size: 14px;
+        font-size: 0.93em;
         letter-spacing: 4px;
         color: #efd7ca;
         background: rgba(225, 225, 225, 0.1);
