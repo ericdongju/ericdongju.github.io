@@ -51,6 +51,22 @@
 
         </section>
         <!-- /Splash -->
+        <div>
+        <div class="stack" id="mobilenav_placeholder"></div>
+        <div class="stack" id="mobilenav">
+        <ul>
+            <li><a href="#whoami">ABOUT</a>
+
+            </li>
+            <li><a href="#projects">PROJECTS</a>
+
+            </li>
+            <li><a href="#findme">FIND ME</a>
+
+            </li>
+        </ul>
+        </div>
+        </div>
         <!--About--> <a id="whoami"></a>
 
         <section id="About" class="page">
@@ -142,7 +158,7 @@
             /* Background blur: */
             $(window).scroll(function() {
                 var s = $(window).scrollTop(),
-                    opacityVal = (s / 2500.0);
+                    opacityVal = (s / 350.0);
                 $('.blurred-img').css('opacity', opacityVal);
             });
         </script>
@@ -180,6 +196,22 @@
                 $window.resize(resize)
                     .trigger('resize');
             })(jQuery);
+        </script>
+        <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                var scrollTop = 300;
+                if($(window).scrollTop() >= scrollTop){
+                    $('#mobilenav').css({
+                        position : 'fixed',
+                        top : '0'
+                    });
+                }
+                if($(window).scrollTop() < scrollTop){
+                    $('#mobilenav').removeAttr('style');
+                }
+            })
+        })
         </script>
     </body>
 
