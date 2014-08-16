@@ -42,9 +42,9 @@
         <section id="splash">
             <div id="header" class="white Vollkorn">
                 <img id="h_logo" class="center animated bounceInDown" draggable="false" src="img/logo.png" alt="logo" />
-                <img id="circle" draggable="false" src="img/profile.jpeg" />
+                <img id="circle" draggable="false" src="img/mobilelogo.png" />
                  <h1 class="animated bounceInLeft">ERIC DONGJU LEE</h1>
-                <br><span id="subtext" class="animated bounceInUp">Web Designer and Developer</span>
+                <br><div id="subtext" class="animated bounceInUp">Web Designer and Developer</div>
             </div>
             </div> <a href="#whoami"><div id="s_arrow" class="animated bounceIn"></div></a>
 
@@ -86,7 +86,7 @@
                 <div id="A3" class="rightdiv hidden">
                      <h3>CREATOR</h3>
 
-                    <p>I started writing stories when I was four. I created my first website when I was twelve. My entire life I've been creating. It's where my passions lie. But ultimately it's this drive to create the pushes me into learning new languages and new techiniques-- to better achieve my visions.</p>
+                    <p>I started writing stories when I was four. I created my first website when I was twelve. My entire life I've been creating. It's where my passions lie. </p>
                       <a href="resume.html"><div id="mobileresume" class="center"> DOWNLOAD RESUME</div></a>
                 </div>
                 <a href="resume.html"><div id="resume" class="center singlelink hidden"> VIEW RESUME</div></a>
@@ -98,22 +98,16 @@
 
         <section id="Projects" class="page center">
              <h2>PROJECTS</h2>
-
             <div id="P_wrap" class="center Vollkorn">
-                <div id="P1" class="leftdiv">
-                     <h3>DongJu Design</h3>
-
+                <div id="P1" class="leftdiv hidden">
+                     <h3>DONGJU DESIGNS</h3>
                 </div>
-                <div id="P2" class="centerdiv">
-                     <h3>[Web App ]</h3>
-
+                <div id="P2" class="centerdiv hidden">
+                     <h3>The Peculiar Case Of <br>TREVOR BURNSWICK</h3>
                 </div>
-                <div id="P3" class="rightdiv">
-                     <h3>One Script A Day</h3>
-
+                <div id="P3" class="rightdiv hidden">
+                     <h3>WRITING</h3>
                 </div>
-                <div id="bottom"></div> <a target="_blank" href="http://github.com/ericdongju"><div class="center singlelink"> VIEW GITHUB</div></a>
-
             </div>
         </section>
         <!-- /Portfoilio -->
@@ -145,8 +139,8 @@
         <script>
             /* Initial fade-in: */
             $(document).ready(function() {
-                $("#header, #filter, #s_arrow").hide();
-                $("#header,#filter").delay(500).fadeIn(1200);
+                $("#header, #s_arrow").hide();
+                $("#header").delay(500).fadeIn(1200);
                 $("#s_arrow").delay(2000).fadeIn(1500);
             });
             /*Smooth scroll between anchors: */
@@ -159,61 +153,73 @@
             /* Background blur: */
             $(window).scroll(function() {
                 var s = $(window).scrollTop(),
-                    opacityVal = (s / 350.0);
+                    opacityVal = (s / 250.0);
                 $('.blurred-img').css('opacity', opacityVal);
             });
         </script>
         <script>
-            /* Div Fade-ins including fallback for mobile: */
-            (function($) {
-                var $window = $(window),
-                    $html = $('#A1, #A2, #A3, #resume,#F_linkwrap');
-                function resize() {
-                    if ($window.width() < 800) {
-                        return $html.removeClass('hidden');
+        /* Div Fade-ins including fallback for mobile: */
+         (function ($) {
+            var $window = $(window),
+                $html = $('#A1, #A2, #A3, #resume,#F_linkwrap, #P1, #P2, #P3');
+
+            function resize() {
+                if ($window.width() < 800) {
+                    return $html.removeClass('hidden');
+                }
+                $html.addClass('hidden');
+                $(window).scroll(function () {
+                    var height = $(window).scrollTop();
+                    var ninetyPercent = $(window).height() * 0.7;
+                    if (height >= ninetyPercent) {
+                        $('#A1').removeClass('hidden').addClass('animated fadeInLeft');
+                        $('#A2').removeClass('hidden').addClass('animated fadeIn');
+                        $('#A3').removeClass('hidden').addClass('animated fadeInRight');
+                        $('#resume').removeClass('hidden').addClass('animated fadeIn');
+                        $('#resume').removeClass('hidden').addClass('animated fadeIn');
                     }
-                    $html.addClass('hidden');
-                    $(window).scroll(function() {
-                var height = $(window).scrollTop();
-                var ninetyPercent = $(window).height() * 0.7;
-                if (height >= ninetyPercent) {
-                    $('#A1').removeClass('hidden').addClass('animated fadeInLeft');
-                    $('#A2').removeClass('hidden').addClass('animated fadeIn');
-                    $('#A3').removeClass('hidden').addClass('animated fadeInRight');
-                    $('#resume').removeClass('hidden').addClass('animated fadeIn');
-                    $('#resume').removeClass('hidden').addClass('animated fadeIn');
-                }
-            });
-            $(window).scroll(function() {
-                var height = $(window).scrollTop();
-                var p = $(window).height() * 3.3;
-                if (height >= p) {
-                    $('#F_linkwrap').removeClass('hidden').addClass('animated fadeIn');
-                }
-            });
+                });
+                $(window).scroll(function () {
+                    var height = $(window).scrollTop();
+                    var p = $(window).height() * 2.25;
+                    if (height >= p) {
+                        $('#P1').removeClass('hidden').addClass('animated fadeIn');
+                        $('#P2').removeClass('hidden').addClass('animated fadeIn');
+                        $('#P3').removeClass('hidden').addClass('animated fadeIn');
+                    }
+                });
+                $(window).scroll(function () {
+                    var height = $(window).scrollTop();
+                    var p = $(window).height() * 3.1;
+                    if (height >= p) {
+                        $('#F_linkwrap').removeClass('hidden').addClass('animated fadeIn');
+                    }
+                });
 
-                }
+            }
 
-                $window.resize(resize)
-                    .trigger('resize');
-            })(jQuery);
+            $window.resize(resize)
+                .trigger('resize');
+        })(jQuery);
         </script>
         <script>
-        $(document).ready(function(){
-            $(window).scroll(function(){
+        $(document).ready(function () {
+            $(window).scroll(function () {
                 var scrollTop = 300;
-                if($(window).scrollTop() >= scrollTop){
+                if ($(window).scrollTop() >= scrollTop) {
                     $('#mobilenav').css({
-                        position : 'fixed',
-                        top : '0'
+                        position: 'fixed',
+                        top: '0'
                     });
                 }
-                if($(window).scrollTop() < scrollTop){
+                if ($(window).scrollTop() < scrollTop) {
                     $('#mobilenav').removeAttr('style');
                 }
             })
         })
         </script>
+        <script>
+        document.documentElement.style.overflowX = 'hidden';</script>
     </body>
 
 </html>
