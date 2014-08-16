@@ -42,7 +42,7 @@
         <section id="splash">
             <div id="header" class="white Vollkorn">
                 <img id="h_logo" class="center animated bounceInDown" draggable="false" src="img/logo.png" alt="logo" />
-                <img id="circle" draggable="false" src="img/mobilelogo.png" />
+                <img id="circle" class="center animated bounceInDown" draggable="false" src="img/mlogo.png" />
                  <h1 class="animated bounceInLeft">ERIC DONGJU LEE</h1>
                 <br><div id="subtext" class="animated bounceInUp">Web Designer and Developer</div>
             </div>
@@ -100,12 +100,15 @@
              <h2>PROJECTS</h2>
             <div id="P_wrap" class="center Vollkorn">
                 <div id="P1" class="leftdiv hidden">
+                    <div class="filter"></div>
                      <h3>DONGJU DESIGNS</h3>
                 </div>
                 <div id="P2" class="centerdiv hidden">
+                    <div class="filter"></div>
                      <h3>The Peculiar Case Of <br>TREVOR BURNSWICK</h3>
                 </div>
                 <div id="P3" class="rightdiv hidden">
+                    <div class="filter"></div>
                      <h3>WRITING</h3>
                 </div>
             </div>
@@ -137,6 +140,12 @@
             </div>
         </footer>
         <script>
+            /* Initial fade-in: */
+            $(document).ready(function() {
+                $("#header, #s_arrow").hide();
+                $("#header").delay(500).fadeIn(1200);
+                $("#s_arrow").delay(2000).fadeIn(1500);
+            });
             /*Smooth scroll between anchors: */
             $('a').click(function() {
                 $('html, body').animate({
